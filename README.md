@@ -24,3 +24,7 @@ SQITK3073-Tax-Program/
 ├── users.csv           # Stores registered User IDs, IC numbers, and passwords
 ├── tax_records.csv     # Stores tax calculation records (User ID, Test Case ID, Income, Relief, Tax Payable)
 └── README.md           # Project documentation
+
+⚙️ Prerequisites & Environment SetupEnsure you have Python 3.x installed along with the required library (pandas).Install pandas via terminal/command prompt:Bashpip install pandas
+🚀 How to Run the ProgramClone or download this repository to your local machine.Open your terminal or code editor (e.g., VS Code or PyCharm) in the project directory.Run the main program:Bashpython main.py
+Follow the interactive CLI menu:Option 1: Register a new user (requires a User ID and 12-digit IC).Option 2: Log in using your User ID and password (last 4 digits of IC).Option 3: Calculate personal income tax by entering annual income and total tax relief.Option 4: Automatically execute and save the 5 required test cases (T01 – T05).Option 5: View all saved tax records formatted as a table via pandas.📊 Tax Calculation Rules (YA 2026 Summary)Chargeable Income = $\max(0, \text{Annual Income} - \text{Total Tax Relief})$Progressive Tax Rates: Applied across progressive tax brackets from 0% to 30%.Individual Tax Rebate: RM400 rebate is granted if chargeable income does not exceed RM35,000.Developed for Universiti Utara Malaysia (UUM) - SQITK3073 Individual Project.
