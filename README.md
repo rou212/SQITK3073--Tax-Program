@@ -59,6 +59,8 @@ python main.py
 * **Option 3**: Calculate personal income tax by entering annual income and total tax relief.
 * **Option 4**: Automatically execute and save the 5 required test cases (**T01 – T05**).
 * **Option 5**: View all saved tax records formatted as a table via `pandas`.
+* **Option 6**: Log out programme
+* **Option 7**: Exit Programme
 
 
 
