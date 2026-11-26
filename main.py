@@ -1,3 +1,4 @@
+
 from function import (
     authenticate_user,
     calculate_tax,
@@ -60,17 +61,24 @@ def main():
       print("\n--- User Registration ---")
       u_id = input("Enter desired User ID: ").strip()
       ic = input("Enter 12-digit IC Number (without dashes): ").strip()
-      if u_id and ic:
-        register_user(u_id, ic)
-      else:
+      if not u_id or not ic:
         print("[Error] Fields cannot be empty.")
+      elif not u_id.isdigit():
+        print("[Error] please enter userid")
+      else:
+        register_user(u_id, ic)
 
     elif choice == "2":
       print("\n--- User Login ---")
       u_id = input("Enter User ID: ").strip()
       pwd = input("Enter Password (last 4 digits of IC): ").strip()
-      if authenticate_user(u_id, pwd):
-        current_user = u_id
+      if not u_id or not pwd:
+        print("[Error] Fields cannot be empty.")
+      elif not u_id.isdigit():
+        print("[Error] please enter userid")
+      else:
+        if authenticate_user(u_id, pwd):
+          current_user = u_id
 
     elif choice == "3":
       if not current_user:
